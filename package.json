@@ -1,0 +1,21 @@
+{
+    "name": "rws-projects",
+    "version": "1.0.0",
+    "description": "",
+    "main": "index.js",
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1",
+        "cypress:open": "npx cypress open",
+        "cypress:run:record": "npx cypress run --record --key e6e37bde-e85f-44b5-847d-b809fd67b38a",
+        "cypress:vsc": "code . && npx cypress open",
+        "cypress:all-cts": "cypress run --spec \"cypress/e2e/ALL-CTs/*.js\""
+    },
+    "keywords": [],
+    "author": "",
+    "license": "ISC",
+    "devDependencies": {
+        "@cypress/snapshot": "^2.1.7",
+        "cypress": "^15.9.0",
+        "cypress-image-diff-js": "^2.5.0"
+    }
+}

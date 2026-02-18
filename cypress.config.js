@@ -1,9 +1,11 @@
-const { defineConfig } = require("cypress");
+const { defineConfig } = require('cypress');
 
 module.exports = defineConfig({
-  e2e: {
-    setupNodeEvents(on, config) {
-      // implement node event listeners here
+    e2e: {
+        // Вказуємо шлях тільки до папки CTs
+        specPattern: 'cypress/e2e/CTs/**/*.cy.js',
+
+        // Опційно: стартова сторінка для тестів
+        baseUrl: 'http://localhost:3000',
     },
-  },
 });

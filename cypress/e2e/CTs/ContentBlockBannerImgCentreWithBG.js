@@ -1,7 +1,7 @@
 describe('Banner component test on page', () => {
     beforeEach(() => {
         // Відкриваємо сторінку
-        cy.visit('https://www.rws.com/test/git/brightcove-content-block-player/');
+        cy.visit('https://www.rws.com/test/git/content-block-banner-autoplay/');
 
         // Закриваємо кукі банер, якщо він є
         cy.acceptCookies();
@@ -9,11 +9,9 @@ describe('Banner component test on page', () => {
 
     it('Checks the banner component and takes a screenshot', () => {
         // Перевіряємо, що компонент існує і видимий
-        cy.get('section[id="229458"]', { timeout: 5000 }).should('exist').and('be.visible');
+        cy.get('section[id="233164"]', { timeout: 5000 }).should('exist').and('be.visible');
 
         // Робимо скріншот компонента
-        cy.get('section[id="229458"]').screenshot(
-            'row content_block_with_image__row content_block_with_image__row--center align--center justify--center',
-        );
+        cy.get('section[id="233164"]').screenshot('content_block_with_image container');
     });
 });

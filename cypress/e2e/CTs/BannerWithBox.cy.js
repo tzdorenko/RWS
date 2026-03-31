@@ -12,6 +12,6 @@ describe('Banner component test on page', () => {
         cy.get('section[id="275515"]', { timeout: 5000 }).should('exist').and('be.visible');
 
         // Робимо скріншот компонента
-        cy.get('section[id="275515"]').screenshot('banner-with-box');
+        cy.get('section[id="275515"]').screenshot('banner_with_box');
     });
 });

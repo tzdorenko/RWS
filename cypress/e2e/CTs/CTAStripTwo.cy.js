@@ -1,19 +1,19 @@
-describe('CTA Strip page', () => {
+describe('Banner component test on page', () => {
     beforeEach(() => {
-        cy.visit('https://www.rws.com/test/git/strip/');
+        // Відкриваємо сторінку
+        cy.visit('https://www.rws.com/test/git/two-st-strip/');
+
+        // Закриваємо кукі банер, якщо він є
+        cy.acceptCookies();
     });
 
-    it('has a cta_strip container section', () => {
-        cy.get('.cta_strip .container').should('exist').and('be.visible');
-    });
+    it('Checks the banner component and takes a screenshot', () => {
+        // Перевіряємо, що компонент існує і видимий
+        cy.get('section[id="197377"]', { timeout: 5000 }).should('exist').and('be.visible');
 
-    it('has H1 with correct text', () => {
-        cy.get('h1').should('be.visible').and('have.text', 'CTA strip - Login to workzone');
-    });
-
-    it('has a CTA link with correct text and href', () => {
-        cy.contains('a', 'Login to SDL Workzone')
-            .should('be.visible')
-            .and('have.attr', 'href', 'https://sdl.appiancloud.com/suite/');
+        // Робимо скріншот компонента
+        cy.get('section[id="197377"]').screenshot(
+            'cp cp--white banner_with_box variant--banner-with-box first',
+        );
     });
 });

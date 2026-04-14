@@ -1,4 +1,4 @@
-describe('Banner component test on page', () => {
+describe('Comparison table CT on page', () => {
     beforeEach(() => {
         // Відкриваємо сторінку
         cy.visit('https://www.rws.com/test/git/comparison-table/');

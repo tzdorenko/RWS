@@ -1,4 +1,4 @@
-describe('Banner component test on page', () => {
+describe('Case study resourse on page', () => {
     beforeEach(() => {
         // Відкриваємо сторінку
         cy.visit('https://www.rws.com/test/git/case-study/');

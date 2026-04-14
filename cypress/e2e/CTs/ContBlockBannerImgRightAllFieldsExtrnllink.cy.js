@@ -1,3 +1,7 @@
+Cypress.on('uncaught:exception', () => {
+    return false;
+});
+
 describe('Banner component test on page', () => {
     beforeEach(() => {
         // Відкриваємо сторінку

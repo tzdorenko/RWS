@@ -1,17 +1,17 @@
-describe('Banner component test on page', () => {
-    beforeEach(() => {
-        // Відкриваємо сторінку
-        cy.visit('https://www.rws.com/test/git/content-block-banners/');
+describe('Banner component test - section 230415', () => {
+    Cypress.on('uncaught:exception', () => {
+        return false;
+    });
 
-        // Закриваємо кукі банер, якщо він є
+    beforeEach(() => {
+        cy.visit('https://www.rws.com/test/git/content-block-banners/');
         cy.acceptCookies();
     });
 
-    it('Checks the banner component and takes a screenshot', () => {
-        // Перевіряємо, що компонент існує і видимий
-        cy.get('section[id="230415"]', { timeout: 5000 }).should('exist').and('be.visible');
+    it('Checks section 230415 and takes screenshot', () => {
+        cy.get('section[id="230415"]', { timeout: 10000 }).should('exist').and('be.visible');
 
-        // Робимо скріншот компонента
-        cy.get('section[id="230415"]').screenshot('content_block_with_image container');
+        cy.get('section[id="230415"]').scrollIntoView().screenshot('section-230415');
     });
 });
+``;

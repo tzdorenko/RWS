@@ -1,7 +1,7 @@
 describe('Banner component test on page', () => {
     beforeEach(() => {
         // Відкриваємо сторінку
-        cy.visit('cypress/e2e/CTs/BrightcoveContentBlockPlayer.cy.js');
+        cy.visit('https://www.rws.com/test/git/strip/');
 
         // Закриваємо кукі банер, якщо він є
         cy.acceptCookies();

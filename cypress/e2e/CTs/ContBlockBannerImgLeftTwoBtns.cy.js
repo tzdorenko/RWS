@@ -4,8 +4,9 @@ describe('Banner component test - section 230415', () => {
     });
 
     beforeEach(() => {
+        cy.setCookie('OptanonConsent', 'isIABGlobal=false&datestamp=consented');
+        cy.setCookie('OptanonAlertBoxClosed', 'true');
         cy.visit('https://www.rws.com/test/git/content-block-banners/');
-        cy.acceptCookies();
     });
 
     it('Checks section 230415 and takes screenshot', () => {

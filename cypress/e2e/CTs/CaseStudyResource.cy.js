@@ -1,10 +1,8 @@
 describe('Case study resourse on page', () => {
     beforeEach(() => {
-        // Відкриваємо сторінку
+        cy.setCookie('OptanonConsent', 'isIABGlobal=false&datestamp=consented');
+        cy.setCookie('OptanonAlertBoxClosed', 'true');
         cy.visit('https://www.rws.com/test/git/case-study/');
-
-        // Закриваємо кукі банер, якщо він є
-        cy.acceptCookies();
     });
 
     it('Checks the banner component and takes a screenshot', () => {

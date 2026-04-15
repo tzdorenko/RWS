@@ -4,8 +4,9 @@ Cypress.on('uncaught:exception', () => {
 
 describe('Banner component test - section 233168', () => {
     beforeEach(() => {
+        cy.setCookie('OptanonConsent', 'isIABGlobal=false&datestamp=consented');
+        cy.setCookie('OptanonAlertBoxClosed', 'true');
         cy.visit('https://www.rws.com/test/git/content-block-banner-autoplay-one-case/');
-        cy.acceptCookies({ timeout: 10000 });
     });
 
     it('Checks section 233168 and takes screenshot', () => {

@@ -1,7 +1,8 @@
 describe('Content block with video banner', () => {
     beforeEach(() => {
+        cy.setCookie('OptanonConsent', 'isIABGlobal=false&datestamp=consented');
+        cy.setCookie('OptanonAlertBoxClosed', 'true');
         cy.visit('https://www.rws.com/test/git/content-block-cta-img-left-rght/');
-        cy.acceptCookies();
     });
 
     it('Checks video banner and takes stable screenshot', () => {

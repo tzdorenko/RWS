@@ -1,10 +1,8 @@
 describe('Case study digital test on page', () => {
     beforeEach(() => {
-        // Відкриваємо сторінку
+        cy.setCookie('OptanonConsent', 'isIABGlobal=false&datestamp=consented');
+        cy.setCookie('OptanonAlertBoxClosed', 'true');
         cy.visit('https://www.rws.com/test/git/case-study-digital/');
-
-        // Закриваємо кукі банер, якщо він є
-        cy.acceptCookies();
     });
 
     it('Checks the banner component and takes a screenshot', () => {

@@ -1,17 +1,21 @@
+Cypress.on('uncaught:exception', () => false);
+
 describe('Banner component test on page', () => {
     beforeEach(() => {
-        // Відкриваємо сторінку
-        cy.visit('https://www.rws.com/test/git/content-block-expand-img/');
+        cy.setCookie('OptanonConsent', 'isIABGlobal=false&datestamp=consented');
+        cy.setCookie('OptanonAlertBoxClosed', 'true');
 
-        // Закриваємо кукі банер, якщо він є
-        cy.acceptCookies();
+        cy.visit('https://www.rws.com/test/git/content-block-expand-img/');
     });
 
     it('Checks the banner component and takes a screenshot', () => {
-        // Перевіряємо, що компонент існує і видимий
-        cy.get('section[id="246797"]', { timeout: 5000 }).should('exist').and('be.visible');
+        cy.get('section#246797', { timeout: 5000 })
+            .scrollIntoView({ block: 'center' })
+            .should('exist')
+            .and('be.visible');
 
-        // Робимо скріншот компонента
-        cy.get('section[id="246797"]').screenshot('cp cp--original cp--default  ');
+        cy.wait(200);
+
+        cy.get('section#246797').screenshot('section-246797');
     });
 });

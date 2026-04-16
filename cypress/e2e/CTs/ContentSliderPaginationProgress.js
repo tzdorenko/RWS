@@ -13,4 +13,4 @@ describe('Banner component test on page', () => {
         cy.get('section#246600').screenshot('section-246600');
     });
 });
-``;
+е``;

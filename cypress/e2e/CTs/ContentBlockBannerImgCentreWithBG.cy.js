@@ -7,7 +7,7 @@ describe('Banner component test on page', () => {
         cy.acceptCookies();
     });
 
-    it('Checks the banner component and takes a screenshot', () => {
+    it('Checks the CT on the page and takes a screenshot', () => {
         // Перевіряємо, що компонент існує і видимий
         cy.get('section[id="233164"]', { timeout: 5000 }).should('exist').and('be.visible');
 

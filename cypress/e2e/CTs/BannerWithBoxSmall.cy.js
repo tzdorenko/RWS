@@ -5,7 +5,7 @@ describe('Banner component test on page', () => {
         cy.visit('https://www.rws.com/test/git/redesign-2025/banner-with-box-small/');
     });
 
-    it('Checks the banner component and takes a screenshot', () => {
+    it('Checks CT on the page and takes a screenshot', () => {
         // Перевіряємо, що компонент існує і видимий
         cy.get('section[id="275224"]', { timeout: 5000 }).should('exist').and('be.visible');
 

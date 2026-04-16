@@ -8,7 +8,7 @@ describe('Banner component test - section 275496', () => {
         cy.visit('https://www.rws.com/test/git/content-block-cta-img-left-rght/');
     });
 
-    it('Checks section 275496 and takes screenshot', () => {
+    it('Checks section CT on the page and takes screenshot', () => {
         cy.get('section#275496', { timeout: 10000 })
             .scrollIntoView({ block: 'center' })
             .should('exist')

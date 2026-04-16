@@ -2,16 +2,14 @@ describe('Banner component test on page', () => {
     beforeEach(() => {
         cy.setCookie('OptanonConsent', 'isIABGlobal=false&datestamp=consented');
         cy.setCookie('OptanonAlertBoxClosed', 'true');
-        cy.visit('https://www.rws.com/test/git/two-st-strip/');
+        cy.visit('https://www.rws.com/test/git/content-slider/');
     });
 
-    it('Checks CTA Strip Two and takes a screenshot', () => {
+    it('Checks the CT on the page and takes a screenshot', () => {
         // Перевіряємо, що компонент існує і видимий
-        cy.get('section[id="197377"]', { timeout: 5000 }).should('exist').and('be.visible');
+        cy.get('section[id="246593"]', { timeout: 5000 }).should('exist').and('be.visible');
 
         // Робимо скріншот компонента
-        cy.get('section[id="197377"]').screenshot(
-            'cp cp--white banner_with_box variant--banner-with-box first',
-        );
+        cy.get('section[id="246593"]').screenshot('section-246593');
     });
 });

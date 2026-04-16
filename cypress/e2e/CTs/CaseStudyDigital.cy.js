@@ -5,7 +5,7 @@ describe('Case study digital test on page', () => {
         cy.visit('https://www.rws.com/test/git/case-study-digital/');
     });
 
-    it('Checks the banner component and takes a screenshot', () => {
+    it('Checks the component and takes a screenshot', () => {
         // Перевіряємо, що компонент існує і видимий
         cy.get('section[id="284638"]', { timeout: 5000 }).should('exist').and('be.visible');
 

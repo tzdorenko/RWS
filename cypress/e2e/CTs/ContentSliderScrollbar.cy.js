@@ -1,6 +1,6 @@
-describe('Banner component test on page', () => {
-    Cypress.on('uncaught:exception', () => false);
+Cypress.on('uncaught:exception', () => false);
 
+describe('Banner component test – section 246600', () => {
     beforeEach(() => {
         cy.setCookie('OptanonConsent', 'isIABGlobal=false&datestamp=consented');
         cy.setCookie('OptanonAlertBoxClosed', 'true');
@@ -8,7 +8,12 @@ describe('Banner component test on page', () => {
     });
 
     it('Checks the CT on the page and takes a screenshot', () => {
-        cy.get('section#246600').should('exist').and('be.visible');
+        cy.get('section#246600')
+            .scrollIntoView({ block: 'center' })
+            .should('exist')
+            .and('be.visible');
+
+        cy.wait(200); // стабілізація layout
 
         cy.get('section#246600').screenshot('section-246600');
     });

@@ -1,10 +1,7 @@
 Cypress.on('uncaught:exception', () => false);
 
-describe('Banner component test - section 275496', () => {
+describe('Banner Block CTA Image Left', () => {
     beforeEach(() => {
-        cy.setCookie('OptanonConsent', 'isIABGlobal=false&datestamp=consented');
-        cy.setCookie('OptanonAlertBoxClosed', 'true');
-
         cy.visit('https://www.rws.com/test/git/content-block-cta-img-left-rght/');
     });
 

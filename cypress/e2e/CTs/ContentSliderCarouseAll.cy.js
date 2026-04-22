@@ -1,10 +1,7 @@
 Cypress.on('uncaught:exception', () => false);
 
-describe('Content Slider Carousel – component screenshot', () => {
+describe('Content Slider Carousel All', () => {
     beforeEach(() => {
-        cy.setCookie('OptanonConsent', 'isIABGlobal=false&datestamp=consented');
-        cy.setCookie('OptanonAlertBoxClosed', 'true');
-
         cy.visit('https://www.rws.com/test/git/content-slider-carousel/');
     });
 

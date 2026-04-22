@@ -1,7 +1,5 @@
-describe('Comparison table CT on page', () => {
+describe('Comparison table', () => {
     beforeEach(() => {
-        cy.setCookie('OptanonConsent', 'isIABGlobal=false&datestamp=consented');
-        cy.setCookie('OptanonAlertBoxClosed', 'true');
         cy.visit('https://www.rws.com/test/git/comparison-table/');
     });
 

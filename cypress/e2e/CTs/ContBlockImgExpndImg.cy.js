@@ -1,10 +1,7 @@
 Cypress.on('uncaught:exception', () => false);
 
-describe('Banner component test on page', () => {
+describe('Content Block Image Expand Image', () => {
     beforeEach(() => {
-        cy.setCookie('OptanonConsent', 'isIABGlobal=false&datestamp=consented');
-        cy.setCookie('OptanonAlertBoxClosed', 'true');
-
         cy.visit('https://www.rws.com/test/git/content-block-expand-img/');
     });
 

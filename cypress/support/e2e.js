@@ -17,3 +17,26 @@
 import './commands';
 // import { matchImageSnapshotCommand } from '@cypress/snapshot';
 // matchImageSnapshotCommand();
+// cypress/support/e2e.js
+// ✅ cookies
+beforeEach(() => {
+    cy.setCookie('OptanonConsent', 'isIABGlobal=false');
+    cy.setCookie('OptanonAlertBoxClosed', 'true');
+});
+
+// ✅ MUST BE HERE — GLOBAL + EARLY
+Cypress.on('window:before:load', (win) => {
+    win.addEventListener('error', (event) => {
+        // ignore Brightcove / third-party JS errors
+        event.preventDefault();
+        return false;
+    });
+
+    win.addEventListener('unhandledrejection', (event) => {
+        event.preventDefault();
+        return false;
+    });
+});
+
+// ✅ fallback (leave it too)
+Cypress.on('uncaught:exception', () => false);

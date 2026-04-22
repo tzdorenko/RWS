@@ -1,9 +1,7 @@
 Cypress.on('uncaught:exception', () => false);
 
-describe('Banner component test – section 246600', () => {
+describe('Content Slider Scrollbar', () => {
     beforeEach(() => {
-        cy.setCookie('OptanonConsent', 'isIABGlobal=false&datestamp=consented');
-        cy.setCookie('OptanonAlertBoxClosed', 'true');
         cy.visit('https://www.rws.com/test/git/content-slider/');
     });
 

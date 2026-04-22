@@ -2,10 +2,8 @@ Cypress.on('uncaught:exception', () => {
     return false;
 });
 
-describe('Banner component test on page', () => {
+describe('Banner Block Banner Image Right All Fields External Link', () => {
     beforeEach(() => {
-        cy.setCookie('OptanonConsent', 'isIABGlobal=false&datestamp=consented');
-        cy.setCookie('OptanonAlertBoxClosed', 'true');
         cy.visit('https://www.rws.com/test/git/content-block-expand-img/');
     });
 

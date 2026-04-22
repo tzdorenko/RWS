@@ -1,4 +1,4 @@
-describe('Banner component test on page', () => {
+describe('Content Block Banner Image Centered with Background', () => {
     beforeEach(() => {
         // Відкриваємо сторінку
         cy.visit('https://www.rws.com/test/git/content-block-banner-autoplay/');

@@ -1,9 +1,7 @@
 Cypress.on('uncaught:exception', () => false);
 
-describe('Content Slider Carousel – section 251115', () => {
+describe('Content Slider Carousel ', () => {
     beforeEach(() => {
-        cy.setCookie('OptanonConsent', 'isIABGlobal=false&datestamp=consented');
-        cy.setCookie('OptanonAlertBoxClosed', 'true');
         cy.visit('https://www.rws.com/test/git/content-slider-carousel/');
     });
 

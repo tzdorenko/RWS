@@ -1,10 +1,7 @@
 Cypress.on('uncaught:exception', () => false);
 
-describe('CT – Description component test', () => {
+describe('Description with Color Text', () => {
     beforeEach(() => {
-        cy.setCookie('OptanonConsent', 'isIABGlobal=false&datestamp=consented');
-        cy.setCookie('OptanonAlertBoxClosed', 'true');
-
         cy.visit('https://www.rws.com/test/git/description-color-text/');
     });
 

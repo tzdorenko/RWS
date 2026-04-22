@@ -1,11 +1,9 @@
-describe('Banner component test - section 230415', () => {
+describe('Banner Block Banner Image Left Two Buttons', () => {
     Cypress.on('uncaught:exception', () => {
         return false;
     });
 
     beforeEach(() => {
-        cy.setCookie('OptanonConsent', 'isIABGlobal=false&datestamp=consented');
-        cy.setCookie('OptanonAlertBoxClosed', 'true');
         cy.visit('https://www.rws.com/test/git/content-block-banners/');
     });
 

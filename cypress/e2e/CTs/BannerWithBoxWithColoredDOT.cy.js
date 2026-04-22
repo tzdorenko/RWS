@@ -1,7 +1,5 @@
-describe('Banner component test on page', () => {
+describe('Banner With Box With Colored DOT', () => {
     beforeEach(() => {
-        cy.setCookie('OptanonConsent', 'isIABGlobal=false&datestamp=consented');
-        cy.setCookie('OptanonAlertBoxClosed', 'true');
         cy.visit('https://www.rws.com/test/git/redesign-2025/colored-dot/');
     });
 

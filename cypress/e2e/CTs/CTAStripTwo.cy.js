@@ -1,7 +1,5 @@
-describe('Banner component test on page', () => {
+describe('CTA Strip Two', () => {
     beforeEach(() => {
-        cy.setCookie('OptanonConsent', 'isIABGlobal=false&datestamp=consented');
-        cy.setCookie('OptanonAlertBoxClosed', 'true');
         cy.visit('https://www.rws.com/test/git/two-st-strip/');
     });
 

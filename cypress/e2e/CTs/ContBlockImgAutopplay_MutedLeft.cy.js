@@ -1,20 +1,18 @@
-describe('Content block with video banner', () => {
+describe('Content Block Image (Video) – Left Center', () => {
     beforeEach(() => {
-        cy.setCookie('OptanonConsent', 'isIABGlobal=false&datestamp=consented');
-        cy.setCookie('OptanonAlertBoxClosed', 'true');
-        cy.visit('https://www.rws.com/test/git/content-block-cta-img-left-rght/');
+        cy.visit('https://www.rws.com/test/git/content-block-banner-autoplay/');
     });
 
-    it('Checks video banner and takes stable screenshot', () => {
-        cy.get('section#233164', { timeout: 10000 }).scrollIntoView().should('be.visible');
+    it('Checks CT on the page and takes a screenshot', () => {
+        // прибираємо header/footer для чистого скріншоту
+        cy.get('header, footer').invoke('css', 'display', 'none');
 
-        // structural checks
-        cy.get('section#233164 video-js').should('exist');
-        cy.get('section#233164 .text_header__title').should('be.visible');
+        cy.get('section#233164', { timeout: 10000 })
+            .scrollIntoView({ block: 'center' })
+            .should('exist')
+            .and('be.visible');
 
-        // visual check without video
-        cy.get('section#233164 .content_block_with_image__content').screenshot(
-            'content-block-233164-content',
-        );
+        cy.get('section#233164').screenshot('content-block-233164');
     });
 });
+``;

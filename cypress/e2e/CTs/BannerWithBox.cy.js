@@ -1,9 +1,7 @@
-describe('Banner component test on page', () => {
+describe('Banner With Box', () => {
     Cypress.on('uncaught:exception', () => false);
 
     beforeEach(() => {
-        cy.setCookie('OptanonConsent', 'isIABGlobal=false&datestamp=consented');
-        cy.setCookie('OptanonAlertBoxClosed', 'true');
         cy.visit('https://www.rws.com/test/git/banner-with-box/');
     });
 

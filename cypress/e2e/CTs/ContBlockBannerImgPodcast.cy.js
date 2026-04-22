@@ -2,10 +2,8 @@ Cypress.on('uncaught:exception', () => {
     return false;
 });
 
-describe('Banner component test - section 233168', () => {
+describe('Banner Block Banner Image Podcast', () => {
     beforeEach(() => {
-        cy.setCookie('OptanonConsent', 'isIABGlobal=false&datestamp=consented');
-        cy.setCookie('OptanonAlertBoxClosed', 'true');
         cy.visit('https://www.rws.com/test/git/content-block-banner-autoplay-one-case/');
     });
 

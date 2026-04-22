@@ -1,14 +1,11 @@
 Cypress.on('uncaught:exception', () => false);
 
-describe('CT – Description component test', () => {
+describe('FAQ Accordion', () => {
     beforeEach(() => {
-        cy.setCookie('OptanonConsent', 'isIABGlobal=false&datestamp=consented');
-        cy.setCookie('OptanonAlertBoxClosed', 'true');
-
         cy.visit('https://www.rws.com/test/git/faq/');
     });
 
-    it('Checks CT - Description on the page and takes a screenshot', () => {
+    it('Checks CT on the page and takes a screenshot', () => {
         cy.get('header, footer').invoke('css', 'display', 'none');
 
         cy.get('section#180299', { timeout: 10000 })

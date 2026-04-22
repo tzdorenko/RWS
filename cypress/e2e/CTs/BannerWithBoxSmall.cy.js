@@ -1,13 +1,13 @@
-describe('Banner component test on page', () => {
+describe('Banner With Box Small', () => {
     beforeEach(() => {
-        cy.setCookie('OptanonConsent', 'isIABGlobal=false&datestamp=consented');
-        cy.setCookie('OptanonAlertBoxClosed', 'true');
         cy.visit('https://www.rws.com/test/git/redesign-2025/banner-with-box-small/');
     });
 
     it('Checks CT on the page and takes a screenshot', () => {
         // Перевіряємо, що компонент існує і видимий
         cy.get('section[id="275224"]', { timeout: 5000 }).should('exist').and('be.visible');
+        cy.get('section[id="275225"]', { timeout: 5000 }).should('exist').and('be.visible');
+        cy.get('section[id="275226"]', { timeout: 5000 }).should('exist').and('be.visible');
 
         // Робимо скріншот компонента
         cy.get('section[id="275224"]').screenshot(

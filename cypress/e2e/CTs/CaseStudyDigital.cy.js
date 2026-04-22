@@ -1,7 +1,5 @@
-describe('Case study digital test on page', () => {
+describe('Case study digital', () => {
     beforeEach(() => {
-        cy.setCookie('OptanonConsent', 'isIABGlobal=false&datestamp=consented');
-        cy.setCookie('OptanonAlertBoxClosed', 'true');
         cy.visit('https://www.rws.com/test/git/case-study-digital/');
     });
 

@@ -2,19 +2,23 @@ Cypress.on('uncaught:exception', () => false);
 
 describe('Hidden Image', () => {
     beforeEach(() => {
+        cy.setCookie('OptanonConsent', 'isIABGlobal=false');
+        cy.setCookie('OptanonAlertBoxClosed', 'true');
+
         cy.visit('https://www.rws.com/test/git/hidden-image/');
     });
 
-    it('Checks Hidden Image on the page and takes a screenshot', () => {
+    it('Hidden image is not rendered and page screenshot is taken', () => {
+        // clean layout for screenshot
         cy.get('header, footer').invoke('css', 'display', 'none');
 
-        cy.get('section#255703', { timeout: 5000 })
-            .scrollIntoView({ block: 'center' })
-            .should('exist')
-            .and('be.visible');
+        // ✅ section exists but is non-rendering
+        cy.get('section#255703').should('exist').and('have.class', 'non-rendering');
 
-        cy.wait(300);
+        // ✅ no image rendered inside
+        cy.get('section#255703 img').should('not.exist');
 
-        cy.get('section#255703').screenshot('section-255703');
+        // ✅ correct screenshot approach
+        cy.screenshot('hidden-image-page', { capture: 'fullPage' });
     });
 });

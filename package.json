@@ -8,9 +8,10 @@
         "cypress:open": "npx cypress open",
         "cypress:run:record": "npx cypress run --record --key e6e37bde-e85f-44b5-847d-b809fd67b38a",
         "cypress:vsc": "code . && npx cypress open",
-        "cy:open": "cypress open",
-        "cypress:open:cts": "npx cypress open --e2e --spec \"cypress/e2e/cts/**/*.cy.js\"",
-        "cypress:run:cts": "npx cypress run --e2e --spec \"cypress/e2e/cts/**/*.cy.js\""
+        "cy:open": "npx cypress open",
+        "cypress:open:cts": "npx cypress open --e2e --spec \"cypress/e2e/cts/*.cy.js\"",
+        "cypress:run:cts": "npx cypress run --e2e --spec \"cypress/e2e/cts/*.cy.js\"",
+        "cypress:run:cts:record": "npx cypress run --record --spec \"cypress/e2e/cts/*.cy.js\""
     },
     "keywords": [],
     "author": "",
@@ -18,6 +19,7 @@
     "devDependencies": {
         "@cypress/snapshot": "^2.1.7",
         "cypress": "^15.9.0",
+        "cypress-iframe": "^1.0.1",
         "cypress-image-diff-js": "^2.5.0"
     }
 }

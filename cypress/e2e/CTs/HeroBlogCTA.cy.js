@@ -5,18 +5,16 @@ describe('Hero Blog CTA', () => {
         cy.visit('https://www.rws.com/test/git/blogs/blog-ten/');
     });
 
-    it('Checks Full Screen Banner on the page and takes a screenshot', () => {
+    it('Hero Blog CTA is visible', () => {
         cy.get('header, footer').invoke('css', 'display', 'none');
 
-        cy.get('..blog_hero__text_block__description', { timeout: 5000 })
+        cy.get('section#228685', { timeout: 10000 })
             .scrollIntoView({ block: 'center' })
             .should('exist')
             .and('be.visible');
 
         cy.wait(300);
 
-        cy.get('..blog_hero__text_block__description').screenshot(
-            '.blog_hero__text_block__description',
-        );
+        cy.get('section#228685').screenshot('section-228685');
     });
 });

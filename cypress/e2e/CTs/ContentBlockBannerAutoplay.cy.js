@@ -13,6 +13,7 @@ describe('Content Block Banner AutoPlay', () => {
 
         cy.wait(200);
 
-        cy.get('section#233164').screenshot('section-233164');
+        cy.get('section#233164').matchImage();
     });
 });
+

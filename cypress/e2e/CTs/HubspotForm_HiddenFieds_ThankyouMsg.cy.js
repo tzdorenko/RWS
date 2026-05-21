@@ -31,3 +31,4 @@ describe('HubSpot form – advertising_conversion_level', () => {
         cy.wait('@hsSubmit').its('response.statusCode').should('eq', 200);
     });
 });
+

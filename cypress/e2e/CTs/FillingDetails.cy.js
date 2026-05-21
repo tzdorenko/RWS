@@ -15,6 +15,7 @@ describe('Filling Details', () => {
 
         cy.wait(300);
 
-        cy.get('section#201702').screenshot('section-201702');
+        cy.get('section#201702').matchImage();
     });
 });
+

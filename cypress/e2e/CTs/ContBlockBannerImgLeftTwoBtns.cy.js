@@ -10,7 +10,8 @@ describe('Banner Block Banner Image Left Two Buttons', () => {
     it('Checks section 230415 and takes screenshot', () => {
         cy.get('section[id="230415"]', { timeout: 10000 }).should('exist').and('be.visible');
 
-        cy.get('section[id="230415"]').scrollIntoView().screenshot('section-230415');
+        cy.get('section[id="230415"]').scrollIntoView().matchImage();
     });
 });
 ``;
+

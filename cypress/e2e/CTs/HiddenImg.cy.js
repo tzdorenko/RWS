@@ -19,6 +19,7 @@ describe('Hidden Image', () => {
         cy.get('section#255703 img').should('not.exist');
 
         // ✅ correct screenshot approach
-        cy.screenshot('hidden-image-page', { capture: 'fullPage' });
+        cy.matchImage();
     });
 });
+

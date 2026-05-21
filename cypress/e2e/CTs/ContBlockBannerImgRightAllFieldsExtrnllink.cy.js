@@ -12,6 +12,7 @@ describe('Banner Block Banner Image Right All Fields External Link', () => {
         cy.get('section[id="246797"]', { timeout: 5000 }).should('exist').and('be.visible');
 
         // Робимо скріншот компонента
-        cy.get('section[id="246797"]').screenshot('cp cp--original cp--default  ');
+        cy.get('section[id="246797"]').matchImage();
     });
 });
+

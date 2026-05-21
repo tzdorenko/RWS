@@ -16,9 +16,8 @@
 // Import commands.js using ES2015 syntax:
 import './commands';
 import 'cypress-iframe';
-// import { matchImageSnapshotCommand } from '@cypress/snapshot';
-// matchImageSnapshotCommand();
-// cypress/support/e2e.js
+import '@frsource/cypress-plugin-visual-regression-diff/dist/support';
+
 // ✅ cookies
 beforeEach(() => {
     cy.setCookie('OptanonConsent', 'isIABGlobal=false');

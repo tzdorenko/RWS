@@ -12,7 +12,8 @@ describe('Content Block Image (Video) – Left Center', () => {
             .should('exist')
             .and('be.visible');
 
-        cy.get('section#233164').screenshot('content-block-233164');
+        cy.get('section#233164').matchImage();
     });
 });
 ``;
+

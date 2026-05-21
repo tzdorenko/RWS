@@ -15,6 +15,7 @@ describe('Feature Selector - Style A - Flipped CTA', () => {
 
         cy.wait(300);
 
-        cy.get('section#187918').screenshot('section-187918');
+        cy.get('section#187918').matchImage();
     });
 });
+

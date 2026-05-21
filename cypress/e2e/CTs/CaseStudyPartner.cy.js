@@ -8,6 +8,7 @@ describe('List Cards GG', () => {
         cy.get('section[id="275408"]', { timeout: 5000 }).should('exist').and('be.visible');
 
         // Робимо скріншот компонента
-        cy.get('section[id="275408"]').screenshot('section[id="275408"]');
+        cy.get('section[id="275408"]').matchImage();
     });
 });
+

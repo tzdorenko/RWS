@@ -4,14 +4,13 @@ describe('Banner With Box Small', () => {
     });
 
     it('Checks CT on the page and takes a screenshot', () => {
-        // Перевіряємо, що компонент існує і видимий
         cy.get('section[id="275224"]', { timeout: 5000 }).should('exist').and('be.visible');
         cy.get('section[id="275225"]', { timeout: 5000 }).should('exist').and('be.visible');
         cy.get('section[id="275226"]', { timeout: 5000 }).should('exist').and('be.visible');
 
-        // Робимо скріншот компонента
-        cy.get('section[id="275224"]').screenshot(
-            'cp cp--white banner_with_box variant--banner-with-box-small first',
-        );
+        cy.get('section[id="275224"]').matchImage();
+        cy.get('section[id="275225"]').matchImage();
+        cy.get('section[id="275226"]').matchImage();
     });
 });
+

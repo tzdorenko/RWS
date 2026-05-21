@@ -15,6 +15,7 @@ describe('Description – Two Lines', () => {
 
         cy.wait(300);
 
-        cy.get('section#196706').screenshot('section-196706');
+        cy.get('section#196706').matchImage();
     });
 });
+

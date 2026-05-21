@@ -15,6 +15,7 @@ describe('FAQ Accordion', () => {
 
         cy.wait(300);
 
-        cy.get('section#180299').screenshot('section-180299');
+        cy.get('section#180299').matchImage();
     });
 });
+

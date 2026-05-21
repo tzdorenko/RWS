@@ -8,6 +8,7 @@ describe('List Cards A', () => {
         cy.get('section[id="180385"]', { timeout: 5000 }).should('exist').and('be.visible');
 
         // Робимо скріншот компонента
-        cy.get('section[id="180385"]').screenshot('section[id="180385"]');
+        cy.get('section[id="180385"]').matchImage();
     });
 });
+

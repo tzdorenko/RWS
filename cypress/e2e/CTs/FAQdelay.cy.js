@@ -15,6 +15,7 @@ describe('FAQ with Delay', () => {
 
         cy.wait(300);
 
-        cy.get('section#250882').screenshot('section-250882');
+        cy.get('section#250882').matchImage();
     });
 });
+

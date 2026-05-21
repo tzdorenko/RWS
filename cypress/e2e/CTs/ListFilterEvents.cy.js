@@ -8,6 +8,7 @@ describe('List Filter Events', () => {
         cy.get('section[id="180342"]', { timeout: 5000 }).should('exist').and('be.visible');
 
         // Робимо скріншот компонента
-        cy.get('section[id="180342"]').screenshot('section[id="180342"]');
+        cy.get('section[id="180342"]').matchImage();
     });
 });
+

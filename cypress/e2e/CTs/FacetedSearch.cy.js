@@ -15,6 +15,7 @@ describe('Faceted Search', () => {
 
         cy.wait(300);
 
-        cy.get('section#194452').screenshot('section-194452');
+        cy.get('section#194452').matchImage();
     });
 });
+

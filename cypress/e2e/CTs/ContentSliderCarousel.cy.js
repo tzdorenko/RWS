@@ -13,7 +13,8 @@ describe('Content Slider Carousel ', () => {
 
         cy.wait(300);
 
-        cy.get('section#251115').screenshot('section-251115');
+        cy.get('section#251115').matchImage();
     });
 });
 ``;
+

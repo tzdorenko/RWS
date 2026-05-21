@@ -15,6 +15,7 @@ describe('Feature Image Left With Background Video', () => {
 
         cy.wait(300);
 
-        cy.get('section#199565').screenshot('section-199565');
+        cy.get('section#199565').matchImage();
     });
 });
+

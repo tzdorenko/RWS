@@ -13,6 +13,7 @@ describe('Content Slider Scrollbar', () => {
 
         cy.wait(200); // стабілізація layout
 
-        cy.get('section#246600').screenshot('section-246600');
+        cy.get('section#246600').matchImage();
     });
 });
+

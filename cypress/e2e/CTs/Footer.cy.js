@@ -13,6 +13,7 @@ describe('Footer', () => {
             .should('exist')
             .and('be.visible');
 
-        cy.get('.footer.container').screenshot('footer-container');
+        cy.get('.footer.container').matchImage();
     });
 });
+

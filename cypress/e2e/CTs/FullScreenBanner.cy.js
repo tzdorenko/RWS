@@ -15,6 +15,7 @@ describe('Full Screen Banner', () => {
 
         cy.wait(300);
 
-        cy.get('section#196915').screenshot('section-196915');
+        cy.get('section#196915').matchImage();
     });
 });
+

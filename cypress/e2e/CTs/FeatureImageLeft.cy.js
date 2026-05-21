@@ -15,6 +15,7 @@ describe('Feature Image Left', () => {
 
         cy.wait(300);
 
-        cy.get('section#179860').screenshot('section-179860');
+        cy.get('section#179860').matchImage();
     });
 });
+

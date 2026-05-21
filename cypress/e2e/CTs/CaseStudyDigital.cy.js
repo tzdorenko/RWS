@@ -8,6 +8,7 @@ describe('Case study digital', () => {
         cy.get('section[id="284638"]', { timeout: 5000 }).should('exist').and('be.visible');
 
         // Робимо скріншот компонента
-        cy.get('section[id="284638"]').screenshot('cp cp--default case_study_digital');
+        cy.get('section[id="284638"]').matchImage();
     });
 });
+

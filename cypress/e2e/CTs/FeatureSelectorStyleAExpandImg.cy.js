@@ -2,7 +2,7 @@ Cypress.on('uncaught:exception', () => false);
 
 describe('Feature Selector - Style A - Expand Image', () => {
     beforeEach(() => {
-        cy.visit('https://www.rws.com/test/git/future-selector-style-a/');
+        cy.visit('/test/git/future-selector-style-a/');
     });
 
     it('Checks Expand Image on the page and takes a screenshot', () => {

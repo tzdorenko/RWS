@@ -1,6 +1,6 @@
 describe('Content Block Image (Video) – Left Center', () => {
     beforeEach(() => {
-        cy.visit('https://www.rws.com/test/git/content-block-banner-autoplay/');
+        cy.visit('/test/git/content-block-banner-autoplay/');
     });
 
     it('Checks CT on the page and takes a screenshot', () => {

@@ -2,7 +2,7 @@ Cypress.on('uncaught:exception', () => false);
 
 describe('Content Block Image Expand Image', () => {
     beforeEach(() => {
-        cy.visit('https://www.rws.com/test/git/content-block-expand-img/');
+        cy.visit('/test/git/content-block-expand-img/');
     });
 
     it('Checks the CT on the page and takes a screenshot', () => {

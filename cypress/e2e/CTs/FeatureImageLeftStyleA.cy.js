@@ -2,7 +2,7 @@ Cypress.on('uncaught:exception', () => false);
 
 describe('Feature Image Left Style A', () => {
     beforeEach(() => {
-        cy.visit('https://www.rws.com/test/git/img-feature-left-style-a/');
+        cy.visit('/test/git/img-feature-left-style-a/');
     });
 
     it('Checks CT on the page and takes a screenshot', () => {

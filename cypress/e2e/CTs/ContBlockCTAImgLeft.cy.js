@@ -2,7 +2,7 @@ Cypress.on('uncaught:exception', () => false);
 
 describe('Banner Block CTA Image Left', () => {
     beforeEach(() => {
-        cy.visit('https://www.rws.com/test/git/content-block-cta-img-left-rght/');
+        cy.visit('/test/git/content-block-cta-img-left-rght/');
     });
 
     it('Checks section CT on the page and takes screenshot', () => {

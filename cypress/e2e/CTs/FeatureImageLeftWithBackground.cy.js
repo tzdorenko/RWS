@@ -2,7 +2,7 @@ Cypress.on('uncaught:exception', () => false);
 
 describe('Feature Image Left With Background', () => {
     beforeEach(() => {
-        cy.visit('https://www.rws.com/test/git/secon-nav-indented-futere-img-left-backgrd/');
+        cy.visit('/test/git/secon-nav-indented-futere-img-left-backgrd/');
     });
 
     it('Checks CT on the page and takes a screenshot', () => {

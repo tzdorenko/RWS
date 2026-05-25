@@ -1,6 +1,6 @@
 describe('List Filter News', () => {
     beforeEach(() => {
-        cy.visit('https://www.rws.com/test/git/filter-news/');
+        cy.visit('/test/git/filter-news/');
     });
 
     it('Checks the component and takes a screenshot', () => {

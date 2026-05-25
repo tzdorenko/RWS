@@ -2,7 +2,7 @@ Cypress.on('uncaught:exception', () => false);
 
 describe('Hero Blog CTA', () => {
     beforeEach(() => {
-        cy.visit('https://www.rws.com/test/git/blogs/blog-ten/');
+        cy.visit('/test/git/blogs/blog-ten/');
     });
 
     it('Hero Blog CTA is visible', () => {

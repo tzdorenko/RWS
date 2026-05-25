@@ -1,6 +1,6 @@
 describe('CTA Strip', () => {
     beforeEach(() => {
-        cy.visit('https://www.rws.com/test/git/strip/');
+        cy.visit('/test/git/strip/');
     });
 
     it('Checks CTA Strip and takes a screenshot', () => {

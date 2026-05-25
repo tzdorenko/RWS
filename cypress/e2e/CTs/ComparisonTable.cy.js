@@ -1,6 +1,6 @@
 describe('Comparison table', () => {
     beforeEach(() => {
-        cy.visit('https://www.rws.com/test/git/comparison-table/');
+        cy.visit('/test/git/comparison-table/');
     });
 
     it('Checks the component and takes a screenshot', () => {

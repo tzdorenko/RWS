@@ -2,7 +2,7 @@ Cypress.on('uncaught:exception', () => false);
 
 describe('Content Block Banner AutoPlay', () => {
     beforeEach(() => {
-        cy.visit('https://www.rws.com/test/git/content-block-banner-autoplay/');
+        cy.visit('/test/git/content-block-banner-autoplay/');
     });
 
     it('Checks section 233164 and takes screenshot', () => {

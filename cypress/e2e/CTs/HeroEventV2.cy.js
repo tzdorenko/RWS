@@ -2,7 +2,7 @@ Cypress.on('uncaught:exception', () => false);
 
 describe('Hero Event V2', () => {
     beforeEach(() => {
-        cy.visit('https://www.rws.com/test/git/hero-event-v2/');
+        cy.visit('/test/git/hero-event-v2/');
     });
 
     it('Checks Hero Event V2 on the page and takes a screenshot', () => {

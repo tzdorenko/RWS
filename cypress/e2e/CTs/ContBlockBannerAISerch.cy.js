@@ -1,6 +1,6 @@
 describe('Banner Block Banner With AI Search', () => {
     beforeEach(() => {
-        cy.visit('https://www.rws.com/test/git/ai-ask/');
+        cy.visit('/test/git/ai-ask/');
     });
 
     it('Checks the component and takes a screenshot', () => {

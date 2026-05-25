@@ -2,7 +2,7 @@ Cypress.on('uncaught:exception', () => false);
 
 describe('Feature Selector - Style A - Flipped CTA', () => {
     beforeEach(() => {
-        cy.visit('https://www.rws.com/test/git/feature-selector-style-a-cta-flipped/');
+        cy.visit('/test/git/feature-selector-style-a-cta-flipped/');
     });
 
     it('Checks Flipped CTA on the page and takes a screenshot', () => {

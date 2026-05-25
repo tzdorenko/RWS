@@ -2,7 +2,7 @@ Cypress.on('uncaught:exception', () => false);
 
 describe('Description', () => {
     beforeEach(() => {
-        cy.visit('https://www.rws.com/test/git/description/');
+        cy.visit('/test/git/description/');
     });
 
     it('Checks CT - Description on the page and takes a screenshot', () => {

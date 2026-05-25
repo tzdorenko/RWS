@@ -2,7 +2,7 @@ Cypress.on('uncaught:exception', () => false);
 
 describe('FAQ Accordion', () => {
     beforeEach(() => {
-        cy.visit('https://www.rws.com/test/git/faq/');
+        cy.visit('/test/git/faq/');
     });
 
     it('Checks CT on the page and takes a screenshot', () => {

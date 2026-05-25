@@ -1,6 +1,6 @@
 describe('Case study digital', () => {
     beforeEach(() => {
-        cy.visit('https://www.rws.com/test/git/case-study-digital/');
+        cy.visit('/test/git/case-study-digital/');
     });
 
     it('Checks the component and takes a screenshot', () => {

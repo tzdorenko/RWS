@@ -1,6 +1,6 @@
 describe('Jump Links', () => {
     beforeEach(() => {
-        cy.visit('https://www.rws.com/test/git/jump-links/');
+        cy.visit('/test/git/jump-links/');
     });
 
     it('Checks the jump links and takes a screenshot', () => {

@@ -1,6 +1,6 @@
 describe('Investor Report', () => {
     beforeEach(() => {
-        cy.visit('https://www.rws.com/test/git/investor-report/');
+        cy.visit('/test/git/investor-report/');
     });
 
     it('Checks the CT on the page and takes a screenshot', () => {

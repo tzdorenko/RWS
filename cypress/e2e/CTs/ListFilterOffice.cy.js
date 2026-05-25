@@ -1,6 +1,6 @@
 describe('List Filter Office', () => {
     beforeEach(() => {
-        cy.visit('https://www.rws.com/test/git/filter-office/');
+        cy.visit('/test/git/filter-office/');
     });
 
     it('Checks the component and takes a screenshot', () => {

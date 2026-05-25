@@ -1,6 +1,6 @@
 describe('HubSpot form – calendly-multi-step-form', () => {
     beforeEach(() => {
-        cy.visit('https://www.rws.com/test/git/calendly-multi-step-form/');
+        cy.visit('/test/git/calendly-multi-step-form/');
     });
 
     it('submits HubSpot form with random email successfully', () => {

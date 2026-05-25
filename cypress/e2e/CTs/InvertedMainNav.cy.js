@@ -1,6 +1,6 @@
 describe('Inverted Main Navigation', () => {
     beforeEach(() => {
-        cy.visit('https://www.rws.com/test/git/inverted-main-nav/');
+        cy.visit('/test/git/inverted-main-nav/');
         cy.acceptCookies();
     });
 

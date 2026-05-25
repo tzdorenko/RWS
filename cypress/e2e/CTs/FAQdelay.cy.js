@@ -2,7 +2,7 @@ Cypress.on('uncaught:exception', () => false);
 
 describe('FAQ with Delay', () => {
     beforeEach(() => {
-        cy.visit('https://www.rws.com/test/git/faq/faq-for-live/');
+        cy.visit('/test/git/faq/faq-for-live/');
     });
 
     it('Checks CT on the page and takes a screenshot', () => {

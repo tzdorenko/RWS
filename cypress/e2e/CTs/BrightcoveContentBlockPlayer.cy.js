@@ -1,6 +1,6 @@
 describe('Brightcove Content Block Image Center', () => {
     beforeEach(() => {
-        cy.visit('https://www.rws.com/test/git/brightcove-content-block-player/');
+        cy.visit('/test/git/brightcove-content-block-player/');
     });
 
     it('Checks the component and takes a screenshot', () => {

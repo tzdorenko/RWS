@@ -1,6 +1,6 @@
 describe('List Cards Large', () => {
     beforeEach(() => {
-        cy.visit('https://www.rws.com/test/git/list-cards-large/');
+        cy.visit('/test/git/list-cards-large/');
     });
 
     it('Checks the component and takes a screenshot', () => {

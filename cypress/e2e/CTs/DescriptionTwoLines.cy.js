@@ -2,7 +2,7 @@ Cypress.on('uncaught:exception', () => false);
 
 describe('Description – Two Lines', () => {
     beforeEach(() => {
-        cy.visit('https://www.rws.com/test/git/description-two-lines/');
+        cy.visit('/test/git/description-two-lines/');
     });
 
     it('Checks CT - Description on the page and takes a screenshot', () => {

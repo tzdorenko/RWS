@@ -4,7 +4,7 @@ describe('HubSpot form – advertising_conversion_level', () => {
 
     beforeEach(() => {
         cy.intercept('POST', '**/submissions/**').as('hsSubmit');
-        cy.visit('https://www.rws.com/test/forms/hubspot-form-two/');
+        cy.visit('/test/forms/hubspot-form-two/');
     });
 
     it('submits HubSpot form and verifies submitted data via HubSpot API', () => {
@@ -47,7 +47,7 @@ describe('HubSpot form – advertising_conversion_level', () => {
 
         // ✅ ПЕРЕВІРКА ЧЕРЕЗ CRM CONTACTS API
         cy.get('@testEmail').then((email) => {
-            cy.wait(5000);
+            cy.wait(20000);
 
             cy.request({
                 method: 'POST',
@@ -108,4 +108,3 @@ describe('HubSpot form – advertising_conversion_level', () => {
         });
     });
 });
-

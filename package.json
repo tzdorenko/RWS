@@ -11,7 +11,11 @@
         "cy:open": "npx cypress open",
         "cypress:open:cts": "npx cypress open --e2e --spec \"cypress/e2e/cts/*.cy.js\"",
         "cypress:run:cts": "npx cypress run --e2e --spec \"cypress/e2e/cts/*.cy.js\"",
-        "cypress:run:cts:record": "npx cypress run --record --spec \"cypress/e2e/cts/*.cy.js\""
+        "cypress:run:cts:record": "npx cypress run --record --spec \"cypress/e2e/cts/*.cy.js\"",
+        "cy:staging": "cross-env ENV=staging npx cypress open --e2e",
+        "cy:live": "cross-env ENV=live npx cypress open --e2e",
+        "cy:staging:run": "cross-env ENV=staging npx cypress run --spec \"cypress/e2e/cts/*.cy.js\"",
+        "cy:live:run": "cross-env ENV=live npx cypress run --spec \"cypress/e2e/cts/*.cy.js\""
     },
     "keywords": [],
     "author": "",
@@ -19,6 +23,7 @@
     "devDependencies": {
         "@cypress/snapshot": "^2.1.7",
         "@frsource/cypress-plugin-visual-regression-diff": "^3.3.10",
+        "cross-env": "^7.0.3",
         "cypress": "^15.9.0",
         "cypress-iframe": "^1.0.1",
         "cypress-image-diff-js": "^2.5.0"

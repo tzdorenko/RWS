@@ -5,7 +5,7 @@ describe('Hidden Image', () => {
         cy.setCookie('OptanonConsent', 'isIABGlobal=false');
         cy.setCookie('OptanonAlertBoxClosed', 'true');
 
-        cy.visit('https://www.rws.com/test/git/hidden-image/');
+        cy.visit('/test/git/hidden-image/');
     });
 
     it('Hidden image is not rendered and page screenshot is taken', () => {

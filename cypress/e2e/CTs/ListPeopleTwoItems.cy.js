@@ -1,6 +1,6 @@
 describe('List People Two Items', () => {
     beforeEach(() => {
-        cy.visit('https://www.rws.com/test/git/list-people-two-items/');
+        cy.visit('/test/git/list-people-two-items/');
     });
 
     it('Checks the component and takes a screenshot', () => {

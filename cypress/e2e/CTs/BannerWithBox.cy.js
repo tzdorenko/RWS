@@ -2,7 +2,7 @@ describe('Banner With Box', () => {
     Cypress.on('uncaught:exception', () => false);
 
     beforeEach(() => {
-        cy.visit('https://www.rws.com/test/git/banner-with-box/');
+        cy.visit('/test/git/banner-with-box/');
     });
 
     it('Checks the banner component and takes a screenshot', () => {

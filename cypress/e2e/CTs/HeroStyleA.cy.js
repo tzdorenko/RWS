@@ -2,7 +2,7 @@ Cypress.on('uncaught:exception', () => false);
 
 describe('Full Screen Banner', () => {
     beforeEach(() => {
-        cy.visit('https://www.rws.com/test/git/full-screen-banner/');
+        cy.visit('/test/git/full-screen-banner/');
     });
 
     it('Checks Full Screen Banner on the page and takes a screenshot', () => {

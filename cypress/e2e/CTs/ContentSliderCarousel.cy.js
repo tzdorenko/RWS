@@ -2,7 +2,7 @@ Cypress.on('uncaught:exception', () => false);
 
 describe('Content Slider Carousel ', () => {
     beforeEach(() => {
-        cy.visit('https://www.rws.com/test/git/content-slider-carousel/');
+        cy.visit('/test/git/content-slider-carousel/');
     });
 
     it('Checks the first Content Slider Carousel component and takes a screenshot', () => {

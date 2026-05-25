@@ -2,7 +2,7 @@ Cypress.on('uncaught:exception', () => false);
 
 describe('Feature Selector', () => {
     beforeEach(() => {
-        cy.visit('https://www.rws.com/test/git/future-selector/');
+        cy.visit('/test/git/future-selector/');
     });
 
     it('Checks Feature Selector on the page and takes a screenshot', () => {

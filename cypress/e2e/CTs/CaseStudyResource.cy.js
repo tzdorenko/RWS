@@ -1,6 +1,6 @@
 describe('Case study resourse', () => {
     beforeEach(() => {
-        cy.visit('https://www.rws.com/test/git/case-study/');
+        cy.visit('/test/git/case-study/');
     });
 
     it('Checks the component and takes a screenshot', () => {

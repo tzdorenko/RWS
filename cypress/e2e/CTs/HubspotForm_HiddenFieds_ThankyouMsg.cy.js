@@ -1,7 +1,7 @@
 describe('HubSpot form – advertising_conversion_level', () => {
     beforeEach(() => {
         cy.intercept('POST', '**/submissions/**').as('hsSubmit');
-        cy.visit('https://www.rws.com/test/forms/hubspot-form-two/');
+        cy.visit('/test/forms/hubspot-form-two/');
     });
 
     it('submits HubSpot form successfully', () => {

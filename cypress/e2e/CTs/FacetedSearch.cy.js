@@ -2,7 +2,7 @@ Cypress.on('uncaught:exception', () => false);
 
 describe('Faceted Search', () => {
     beforeEach(() => {
-        cy.visit('https://www.rws.com/test/git/faced-search/');
+        cy.visit('/test/git/faced-search/');
     });
 
     it('Checks CT on the page and takes a screenshot', () => {

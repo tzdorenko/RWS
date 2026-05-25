@@ -2,7 +2,7 @@ Cypress.on('uncaught:exception', () => false);
 
 describe('Hero Office', () => {
     beforeEach(() => {
-        cy.visit('https://www.rws.com/test/git/hero-office/');
+        cy.visit('/test/git/hero-office/');
     });
 
     it('Checks Hero Office on the page and takes a screenshot', () => {

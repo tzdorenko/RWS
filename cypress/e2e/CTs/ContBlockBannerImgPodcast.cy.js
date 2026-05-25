@@ -4,7 +4,7 @@ Cypress.on('uncaught:exception', () => {
 
 describe('Banner Block Banner Image Podcast', () => {
     beforeEach(() => {
-        cy.visit('https://www.rws.com/test/git/content-block-banner-autoplay-one-case/');
+        cy.visit('/test/git/content-block-banner-autoplay-one-case/');
     });
 
     it('Checks section 233168 and takes screenshot', () => {

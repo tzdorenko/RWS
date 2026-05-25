@@ -2,7 +2,7 @@ Cypress.on('uncaught:exception', () => false);
 
 describe('Feature Image Left With Background Video', () => {
     beforeEach(() => {
-        cy.visit('https://www.rws.com/test/git/feature-img-left-video-backgr/');
+        cy.visit('/test/git/feature-img-left-video-backgr/');
     });
 
     it('Checks CT - Description on the page and takes a screenshot', () => {

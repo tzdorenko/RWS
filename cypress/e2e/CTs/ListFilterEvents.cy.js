@@ -1,6 +1,6 @@
 describe('List Filter Events', () => {
     beforeEach(() => {
-        cy.visit('https://www.rws.com/test/git/filter-event-and-webinar/');
+        cy.visit('/test/git/filter-event-and-webinar/');
     });
 
     it('Checks the component and takes a screenshot', () => {

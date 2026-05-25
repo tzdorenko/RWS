@@ -1,6 +1,6 @@
 describe('Banner With Box With Colored DOT', () => {
     beforeEach(() => {
-        cy.visit('https://www.rws.com/test/git/redesign-2025/colored-dot/');
+        cy.visit('/test/git/redesign-2025/colored-dot/');
     });
 
     it('Checks CT on the page and takes a screenshot', () => {

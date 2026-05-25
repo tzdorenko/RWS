@@ -1,6 +1,6 @@
 describe('Content Slider Pagination Progress', () => {
     beforeEach(() => {
-        cy.visit('https://www.rws.com/test/git/content-slider/');
+        cy.visit('/test/git/content-slider/');
     });
 
     it('Checks the CT on the page and takes a screenshot', () => {

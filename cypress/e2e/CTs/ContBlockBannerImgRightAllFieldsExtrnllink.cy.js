@@ -4,7 +4,7 @@ Cypress.on('uncaught:exception', () => {
 
 describe('Banner Block Banner Image Right All Fields External Link', () => {
     beforeEach(() => {
-        cy.visit('https://www.rws.com/test/git/content-block-expand-img/');
+        cy.visit('/test/git/content-block-expand-img/');
     });
 
     it('Checks the banner component and takes a screenshot', () => {

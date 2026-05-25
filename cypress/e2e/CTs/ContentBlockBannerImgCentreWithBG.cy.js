@@ -1,7 +1,7 @@
 describe('Content Block Banner Image Centered with Background', () => {
     beforeEach(() => {
         // Відкриваємо сторінку
-        cy.visit('https://www.rws.com/test/git/content-block-banner-autoplay/');
+        cy.visit('/test/git/content-block-banner-autoplay/');
 
         // Закриваємо кукі банер, якщо він є
         cy.acceptCookies();

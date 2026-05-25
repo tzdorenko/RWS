@@ -2,7 +2,7 @@ Cypress.on('uncaught:exception', () => false);
 
 describe('Footer', () => {
     beforeEach(() => {
-        cy.visit('https://www.rws.com/test/git/description/');
+        cy.visit('/test/git/description/');
     });
 
     it('Footer is visible', () => {

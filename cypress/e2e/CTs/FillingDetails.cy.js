@@ -2,7 +2,7 @@ Cypress.on('uncaught:exception', () => false);
 
 describe('Filling Details', () => {
     beforeEach(() => {
-        cy.visit('https://www.rws.com/test/git/filing-details/');
+        cy.visit('/test/git/filing-details/');
     });
 
     it('Checks Filling Details on the page and takes a screenshot', () => {

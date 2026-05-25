@@ -1,6 +1,6 @@
 describe('Banner With Box Small', () => {
     beforeEach(() => {
-        cy.visit('https://www.rws.com/test/git/redesign-2025/banner-with-box-small/');
+        cy.visit('/test/git/redesign-2025/banner-with-box-small/');
     });
 
     it('Checks CT on the page and takes a screenshot', () => {

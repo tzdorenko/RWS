@@ -2,7 +2,7 @@ Cypress.on('uncaught:exception', () => false);
 
 describe('Feature Image Left', () => {
     beforeEach(() => {
-        cy.visit('https://www.rws.com/test/git/feat-img-left-and-sub-nab-ind-sticky/');
+        cy.visit('/test/git/feat-img-left-and-sub-nab-ind-sticky/');
     });
 
     it('Checks CT on the page and takes a screenshot', () => {

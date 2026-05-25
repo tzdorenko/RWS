@@ -2,7 +2,7 @@ Cypress.on('uncaught:exception', () => false);
 
 describe('Description with Color Text', () => {
     beforeEach(() => {
-        cy.visit('https://www.rws.com/test/git/description-color-text/');
+        cy.visit('/test/git/description-color-text/');
     });
 
     it('Checks CT - Description on the page and takes a screenshot', () => {

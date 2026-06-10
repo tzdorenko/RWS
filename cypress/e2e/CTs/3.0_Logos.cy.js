@@ -1,4 +1,4 @@
-describe('Hero AI', () => {
+describe('Logos', () => {
     Cypress.on('uncaught:exception', () => false);
 
     beforeEach(() => {

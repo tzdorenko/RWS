@@ -13,7 +13,7 @@ describe('Content Block Image Expand Image', () => {
 
         cy.wait(200);
 
-        cy.get('section#246797').matchImage();
+        cy.get('section#246797').matchImageStable();
     });
 });
 

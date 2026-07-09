@@ -8,7 +8,7 @@ describe('Form with Text 2', () => {
     it('Checks the banner component and takes a screenshot', () => {
         cy.get('section#293657').should('exist').and('be.visible');
 
-        cy.get('section#293657').matchImage();
+        cy.get('section#293657').matchImageStable();
     });
 });
 ``;

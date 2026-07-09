@@ -7,7 +7,7 @@ describe('Inverted Main Navigation', () => {
     it('Checks the inverted main navigation and takes a screenshot', () => {
         cy.get('.inverted-overlay').should('exist');
 
-        cy.matchImage();
+        cy.matchImageStable();
     });
 });
 

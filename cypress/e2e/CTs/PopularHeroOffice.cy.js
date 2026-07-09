@@ -7,6 +7,6 @@ describe('Popular Hero Office', () => {
         // Перевіряємо, що компонент існує і видимий
         cy.get('section[id="194320"]', { timeout: 5000 }).should('exist').and('be.visible');
 
-        cy.get('section[id="194320"]').matchImage();
+        cy.get('section[id="194320"]').matchImageStable();
     });
 });

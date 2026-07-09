@@ -15,7 +15,7 @@ describe('Hero Blog CTA', () => {
 
         cy.wait(300);
 
-        cy.get('section#228685').matchImage();
+        cy.get('section#228685').matchImageStable();
     });
 });
 

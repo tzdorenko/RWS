@@ -15,7 +15,7 @@ describe('Description', () => {
 
         cy.wait(300);
 
-        cy.get('section#180333').matchImage();
+        cy.get('section#180333').matchImageStable();
     });
 });
 

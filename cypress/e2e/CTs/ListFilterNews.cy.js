@@ -8,7 +8,7 @@ describe('List Filter News', () => {
         cy.get('section[id="180334"]', { timeout: 5000 }).should('exist').and('be.visible');
 
         // Робимо скріншот компонента
-        cy.get('section[id="180334"]').matchImage();
+        cy.get('section[id="180334"]').matchImageStable();
     });
 });
 

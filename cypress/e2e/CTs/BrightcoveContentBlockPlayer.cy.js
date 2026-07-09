@@ -8,7 +8,7 @@ describe('Brightcove Content Block Image Center', () => {
         cy.get('section[id="229458"]', { timeout: 5000 }).should('exist').and('be.visible');
 
         // Робимо скріншот компонента
-        cy.get('section[id="229458"]').matchImage();
+        cy.get('section[id="229458"]').matchImageStable();
     });
 });
 

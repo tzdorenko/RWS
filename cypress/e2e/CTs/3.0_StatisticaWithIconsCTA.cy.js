@@ -8,7 +8,7 @@ describe('Statistics with Icons and CTA', () => {
     it('Checks the banner component and takes a screenshot', () => {
         cy.get('section#294025').should('exist').and('be.visible');
 
-        cy.get('section#294025').matchImage();
+        cy.get('section#294025').matchImageStable();
     });
 });
 ``;

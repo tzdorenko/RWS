@@ -8,7 +8,7 @@ describe('Comparison table', () => {
         cy.get('section[id="180449"]', { timeout: 5000 }).should('exist').and('be.visible');
 
         // Робимо скріншот компонента
-        cy.get('section[id="180449"]').matchImage();
+        cy.get('section[id="180449"]').matchImageStable();
     });
 });
 

@@ -8,7 +8,7 @@ describe('Shop Product Feature Table', () => {
     it('Checks the banner component and takes a screenshot', () => {
         cy.get('section#295365').should('exist').and('be.visible');
 
-        cy.get('section#295365').matchImage();
+        cy.get('section#295365').matchImageStable();
     });
 });
 ``;

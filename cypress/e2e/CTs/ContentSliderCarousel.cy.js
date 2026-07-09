@@ -13,7 +13,7 @@ describe('Content Slider Carousel ', () => {
 
         cy.wait(300);
 
-        cy.get('section#251115').matchImage();
+        cy.get('section#251115').matchImageStable();
     });
 });
 ``;

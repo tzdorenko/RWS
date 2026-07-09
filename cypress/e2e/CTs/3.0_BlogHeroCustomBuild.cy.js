@@ -8,7 +8,7 @@ describe('Blog Hero', () => {
     it('Checks the banner component and takes a screenshot', () => {
         cy.get('section#296580').should('exist').and('be.visible');
 
-        cy.get('section#296580').matchImage();
+        cy.get('section#296580').matchImageStable();
     });
 });
 ``;

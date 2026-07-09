@@ -15,7 +15,7 @@ describe('Description with Color Text', () => {
 
         cy.wait(300);
 
-        cy.get('section#255814').matchImage();
+        cy.get('section#255814').matchImageStable();
     });
 });
 

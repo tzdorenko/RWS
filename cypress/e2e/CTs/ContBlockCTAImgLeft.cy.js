@@ -13,7 +13,7 @@ describe('Banner Block CTA Image Left', () => {
 
         cy.wait(200); // даємо layout стабілізуватись
 
-        cy.get('section#275496').matchImage();
+        cy.get('section#275496').matchImageStable();
     });
 });
 

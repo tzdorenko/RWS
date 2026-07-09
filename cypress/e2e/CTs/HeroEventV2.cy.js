@@ -15,7 +15,7 @@ describe('Hero Event V2', () => {
 
         cy.wait(300);
 
-        cy.get('section#195090').matchImage();
+        cy.get('section#195090').matchImageStable();
     });
 });
 

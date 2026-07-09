@@ -12,7 +12,7 @@ describe('Content Block Banner Image Centered with Background', () => {
         cy.get('section[id="233164"]', { timeout: 5000 }).should('exist').and('be.visible');
 
         // Робимо скріншот компонента
-        cy.get('section[id="233164"]').matchImage();
+        cy.get('section[id="233164"]').matchImageStable();
     });
 });
 

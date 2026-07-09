@@ -8,7 +8,7 @@ describe('Content Slider Background Color', () => {
         cy.get('section[id="246593"]', { timeout: 5000 }).should('exist').and('be.visible');
 
         // Робимо скріншот компонента
-        cy.get('section[id="246593"]').matchImage();
+        cy.get('section[id="246593"]').matchImageStable();
     });
 });
 

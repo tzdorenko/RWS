@@ -8,7 +8,7 @@ describe('Alternative Media Vertical Promo', () => {
     it('Checks the banner component and takes a screenshot', () => {
         cy.get('section#293651').should('exist').and('be.visible');
 
-        cy.get('section#293651').matchImage();
+        cy.get('section#293651').matchImageStable();
     });
 });
 ``;

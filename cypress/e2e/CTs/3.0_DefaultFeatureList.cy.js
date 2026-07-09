@@ -8,7 +8,7 @@ describe('Default Feature List', () => {
     it('Checks the banner component and takes a screenshot', () => {
         cy.get('section#294028').should('exist').and('be.visible');
 
-        cy.get('section#294028').matchImage();
+        cy.get('section#294028').matchImageStable();
     });
 });
 ``;

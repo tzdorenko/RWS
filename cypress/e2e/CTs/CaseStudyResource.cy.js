@@ -8,7 +8,7 @@ describe('Case study resourse', () => {
         cy.get('section[id="197306"]', { timeout: 5000 }).should('exist').and('be.visible');
 
         // Робимо скріншот компонента
-        cy.get('section[id="197306"]').matchImage();
+        cy.get('section[id="197306"]').matchImageStable();
     });
 });
 

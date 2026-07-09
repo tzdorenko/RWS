@@ -8,7 +8,7 @@ describe('List Filter Blog', () => {
             .should('exist')
             .and('be.visible');
 
-        cy.get('.col__12.list__results.list__results__blog').matchImage();
+        cy.get('.col__12.list__results.list__results__blog').matchImageStable();
     });
 });
 

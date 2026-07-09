@@ -8,7 +8,7 @@ describe('Banner Block Banner With AI Search', () => {
         cy.get('section[id="284059"]', { timeout: 5000 }).should('exist').and('be.visible');
 
         // Робимо скріншот компонента
-        cy.get('section[id="284059"]').matchImage();
+        cy.get('section[id="284059"]').matchImageStable();
     });
 });
 

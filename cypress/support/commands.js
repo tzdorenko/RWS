@@ -43,3 +43,25 @@ Cypress.Commands.add('acceptCookies', () => {
         cy.log('Cookie banner not found — skipping');
     });
 });
+// Стабільний візуальний скріншот: чекає шрифти та картинки перед matchImage
+Cypress.Commands.add('matchImageStable', { prevSubject: 'element' }, (subject, options) => {
+    // 1. Шрифти завантажені
+    cy.document().its('fonts.status').should('equal', 'loaded');
+
+    // 2. Картинки всередині елемента завантажені (якщо вони є)
+    cy.wrap(subject).then(($el) => {
+        const $imgs = $el.find('img');
+        if ($imgs.length > 0) {
+            cy.wrap($el)
+                .find('img')
+                .should(($found) => {
+                    $found.each((_, img) => {
+                        expect(img.naturalWidth, `img ${img.src}`).to.be.greaterThan(0);
+                    });
+                });
+        }
+    });
+
+    // 3. Скріншот
+    cy.wrap(subject).matchImage(options);
+});

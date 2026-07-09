@@ -15,7 +15,7 @@ describe('Hero Office', () => {
 
         cy.wait(300);
 
-        cy.get('section#180432').matchImage();
+        cy.get('section#180432').matchImageStable();
     });
 });
 

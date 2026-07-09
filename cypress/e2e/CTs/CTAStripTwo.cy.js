@@ -8,7 +8,7 @@ describe('CTA Strip Two', () => {
         cy.get('section[id="197377"]', { timeout: 5000 }).should('exist').and('be.visible');
 
         // Робимо скріншот компонента
-        cy.get('section[id="197377"]').matchImage();
+        cy.get('section[id="197377"]').matchImageStable();
     });
 });
 

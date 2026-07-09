@@ -8,7 +8,7 @@ describe('Shop Product Card Collection', () => {
     it('Checks the banner component and takes a screenshot', () => {
         cy.get('section#295364').should('exist').and('be.visible');
 
-        cy.get('section#295364').matchImage();
+        cy.get('section#295364').matchImageStable();
     });
 });
 ``;

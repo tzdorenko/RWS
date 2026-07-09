@@ -7,6 +7,6 @@ describe('Proof Points Right', () => {
         // Перевіряємо, що компонент існує і видимий
         cy.get('section[id="197310"]', { timeout: 5000 }).should('exist').and('be.visible');
 
-        cy.get('section[id="197310"]').matchImage();
+        cy.get('section[id="197310"]').matchImageStable();
     });
 });

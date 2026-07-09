@@ -19,7 +19,7 @@ describe('Hidden Image', () => {
         cy.get('section#255703 img').should('not.exist');
 
         // ✅ correct screenshot approach
-        cy.matchImage();
+        cy.matchImageStable();
     });
 });
 

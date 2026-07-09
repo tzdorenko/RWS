@@ -15,7 +15,7 @@ describe('Feature Selector', () => {
 
         cy.wait(300);
 
-        cy.get('section#187918').matchImage();
+        cy.get('section#187918').matchImageStable();
     });
 });
 

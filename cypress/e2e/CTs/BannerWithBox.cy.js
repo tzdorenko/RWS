@@ -8,7 +8,7 @@ describe('Banner With Box', () => {
     it('Checks the banner component and takes a screenshot', () => {
         cy.get('section#275515').should('exist').and('be.visible');
 
-        cy.get('section#275515').matchImage();
+        cy.get('section#275515').matchImageStable();
     });
 });
 ``;

@@ -7,8 +7,7 @@ describe('Alternative Media Grid Features', () => {
 
     it('Checks the banner component and takes a screenshot', () => {
         cy.get('section#293685').should('exist').and('be.visible');
-
-        cy.get('section#293685').matchImage();
+        cy.get('section#293685').matchImageStable();
     });
 });
 ``;

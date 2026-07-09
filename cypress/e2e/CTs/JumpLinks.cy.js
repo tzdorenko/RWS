@@ -6,7 +6,7 @@ describe('Jump Links', () => {
     it('Checks the jump links and takes a screenshot', () => {
         cy.get('.jump_links_block__wrapper', { timeout: 5000 }).should('exist').and('be.visible');
 
-        cy.get('.jump_links_block__wrapper').matchImage();
+        cy.get('.jump_links_block__wrapper').matchImageStable();
     });
 });
 

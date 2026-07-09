@@ -16,7 +16,7 @@ describe('Content Slider Carousel All', () => {
 
         cy.wait(300);
 
-        cy.get('section#251116').matchImage();
+        cy.get('section#251116').matchImageStable();
     });
 });
 

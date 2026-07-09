@@ -8,7 +8,7 @@ describe('Logos', () => {
     it('Checks the banner component and takes a screenshot', () => {
         cy.get('section#294017').should('exist').and('be.visible');
 
-        cy.get('section#294017').matchImage();
+        cy.get('section#294017').matchImageStable();
     });
 });
 ``;

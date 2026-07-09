@@ -7,6 +7,6 @@ describe('Signpost Block Icon', () => {
         // Перевіряємо, що компонент існує і видимий
         cy.get('section[id="180173"]', { timeout: 5000 }).should('exist').and('be.visible');
 
-        cy.get('section[id="180173"]').matchImage();
+        cy.get('section[id="180173"]').matchImageStable();
     });
 });

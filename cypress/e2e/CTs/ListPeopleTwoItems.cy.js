@@ -8,7 +8,7 @@ describe('List People Two Items', () => {
         cy.get('section[id="267915"]', { timeout: 5000 }).should('exist').and('be.visible');
 
         // Робимо скріншот компонента
-        cy.get('section[id="267915"]').matchImage();
+        cy.get('section[id="267915"]').matchImageStable();
     });
 });
 

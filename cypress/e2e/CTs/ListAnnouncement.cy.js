@@ -8,7 +8,7 @@ describe('List Announcement', () => {
         cy.get('section[id="section-180474"]', { timeout: 5000 }).should('exist').and('be.visible');
 
         // Робимо скріншот компонента
-        cy.get('section[id="section-180474"]').matchImage();
+        cy.get('section[id="section-180474"]').matchImageStable();
     });
 });
 

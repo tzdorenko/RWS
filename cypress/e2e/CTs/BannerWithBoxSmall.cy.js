@@ -8,9 +8,9 @@ describe('Banner With Box Small', () => {
         cy.get('section[id="275225"]', { timeout: 5000 }).should('exist').and('be.visible');
         cy.get('section[id="275226"]', { timeout: 5000 }).should('exist').and('be.visible');
 
-        cy.get('section[id="275224"]').matchImage();
-        cy.get('section[id="275225"]').matchImage();
-        cy.get('section[id="275226"]').matchImage();
+        cy.get('section[id="275224"]').matchImageStable();
+        cy.get('section[id="275225"]').matchImageStable();
+        cy.get('section[id="275226"]').matchImageStable();
     });
 });
 

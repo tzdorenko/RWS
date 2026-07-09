@@ -6,9 +6,8 @@ describe('Alternative Media Double Image', () => {
     });
 
     it('Checks the banner component and takes a screenshot', () => {
-        cy.get('section#293679').should('exist').and('be.visible');
+        cy.get('section#293679', { timeout: 10000 }).should('exist').and('be.visible');
 
-        cy.get('section#293679').matchImage();
+        cy.get('section#293679').matchImageStable();
     });
 });
-``;

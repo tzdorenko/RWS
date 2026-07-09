@@ -15,7 +15,7 @@ describe('Feature Selector - Style A - Expand Image', () => {
 
         cy.wait(300);
 
-        cy.get('section#187918').matchImage();
+        cy.get('section#187918').matchImageStable();
     });
 });
 

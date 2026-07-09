@@ -7,6 +7,6 @@ describe('Popular Hero Event', () => {
         // Перевіряємо, що компонент існує і видимий
         cy.get('section[id="194319"]', { timeout: 5000 }).should('exist').and('be.visible');
 
-        cy.get('section[id="194319"]').matchImage();
+        cy.get('section[id="194319"]').matchImageStable();
     });
 });

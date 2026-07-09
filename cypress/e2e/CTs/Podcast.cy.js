@@ -10,9 +10,9 @@ describe('Podcast', () => {
         cy.get('section[id="248036"]', { timeout: 5000 }).should('exist').and('be.visible');
         cy.get('section[id="248035"]', { timeout: 5000 }).should('exist').and('be.visible');
 
-        cy.get('section[id="233858"]').matchImage();
-        cy.get('section[id="248037"]').matchImage();
-        cy.get('section[id="248036"]').matchImage();
-        cy.get('section[id="248035"]').matchImage();
+        cy.get('section[id="233858"]').matchImageStable();
+        cy.get('section[id="248037"]').matchImageStable();
+        cy.get('section[id="248036"]').matchImageStable();
+        cy.get('section[id="248035"]').matchImageStable();
     });
 });

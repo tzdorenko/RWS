@@ -8,7 +8,7 @@ describe('List People', () => {
         cy.get('section[id="202296"]', { timeout: 5000 }).should('exist').and('be.visible');
 
         // Робимо скріншот компонента
-        cy.get('section[id="202296"]').matchImage();
+        cy.get('section[id="202296"]').matchImageStable();
     });
 });
 

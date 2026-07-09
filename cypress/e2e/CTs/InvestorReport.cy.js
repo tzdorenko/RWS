@@ -8,7 +8,7 @@ describe('Investor Report', () => {
         cy.get('section[id="section-212398"]', { timeout: 5000 }).should('exist').and('be.visible');
 
         // Робимо скріншот компонента
-        cy.get('section[id="section-212398"]').matchImage();
+        cy.get('section[id="section-212398"]').matchImageStable();
     });
 });
 

@@ -10,7 +10,7 @@ describe('Banner Block Banner Image Podcast', () => {
     it('Checks section 233168 and takes screenshot', () => {
         cy.get('section[id="233168"]', { timeout: 20000 }).should('exist').and('be.visible');
 
-        cy.get('section[id="233168"]').scrollIntoView().matchImage();
+        cy.get('section[id="233168"]').scrollIntoView().matchImageStable();
     });
 });
 

@@ -8,7 +8,7 @@ describe('Content Slider Pagination Progress', () => {
         cy.get('section[id="246605"]', { timeout: 5000 }).should('exist').and('be.visible');
 
         // Робимо скріншот компонента
-        cy.get('section[id="246605"]').matchImage();
+        cy.get('section[id="246605"]').matchImageStable();
     });
 });
 

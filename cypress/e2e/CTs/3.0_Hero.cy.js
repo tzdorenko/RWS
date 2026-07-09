@@ -8,7 +8,7 @@ describe('Hero', () => {
     it('Checks the banner component and takes a screenshot', () => {
         cy.get('section#294018').should('exist').and('be.visible');
 
-        cy.get('section#294018').matchImage();
+        cy.get('section#294018').matchImageStable();
     });
 });
 ``;

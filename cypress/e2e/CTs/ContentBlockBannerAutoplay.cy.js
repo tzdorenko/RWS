@@ -12,8 +12,13 @@ describe('Content Block Banner AutoPlay', () => {
             .and('be.visible');
 
         cy.wait(200);
+        cy.get('section#233164 video').then(($videos) => {
+            $videos.each((i, video) => {
+                video.pause();
+                video.currentTime = 0;
+            });
+        });
 
         cy.get('section#233164').matchImageStable();
     });
 });
-

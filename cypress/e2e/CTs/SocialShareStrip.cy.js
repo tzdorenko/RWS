@@ -7,6 +7,6 @@ describe('Social Share Strip', () => {
         // Перевіряємо, що компонент існує і видимий
         cy.get('.footer__contact__icons', { timeout: 5000 }).should('exist').and('be.visible');
 
-        cy.get('.footer__contact__icons"]').matchImageStable();
+        cy.get('.footer__contact__icons').matchImageStable();
     });
 });

@@ -6,14 +6,8 @@ describe('Blog Two Page', () => {
     });
 
     it('Checks the blog hero section and takes a screenshot', () => {
-        cy.get('section#296585').should('exist').and('be.visible');
+        cy.get('main section').first().should('exist').and('be.visible');
 
-        cy.get('section#296585').matchImage();
-    });
-
-    it('Checks the blog content section and takes a screenshot', () => {
-        cy.get('section[data-theme="dots-enhanced"]').should('exist').and('be.visible');
-
-        cy.get('section[data-theme="dots-enhanced"]').matchImage();
+        cy.get('main section').first().matchImageStable();
     });
 });

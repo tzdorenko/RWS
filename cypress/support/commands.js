@@ -56,6 +56,16 @@ Cypress.Commands.add('matchImageStable', { prevSubject: 'element' }, (subject, o
                 .find('img')
                 .should(($found) => {
                     $found.each((_, img) => {
+                        const rect = img.getBoundingClientRect();
+                        const win = img.ownerDocument.defaultView;
+                        const inViewport =
+                            rect.width > 0 &&
+                            rect.height > 0 &&
+                            rect.bottom > 0 &&
+                            rect.right > 0 &&
+                            rect.top < win.innerHeight &&
+                            rect.left < win.innerWidth;
+                        if (!inViewport) return; // поза в'юпортом (неактивні слайди) — lazy-load не спрацює
                         expect(img.naturalWidth, `img ${img.src}`).to.be.greaterThan(0);
                     });
                 });

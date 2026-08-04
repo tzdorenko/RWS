@@ -5,3 +5,5 @@ dist/
 *.log
 cypress/screenshots/
 cypress.env.json
+*.actual.png
+*.diff.png

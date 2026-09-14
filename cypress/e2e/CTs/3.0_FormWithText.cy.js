@@ -2,6 +2,7 @@ describe('Form with Text', () => {
     Cypress.on('uncaught:exception', () => false);
 
     beforeEach(() => {
+        cy.viewport(1000, 1400); // компонент вищий за дефолтний viewport (1283px)
         cy.visit('/test/3version/form-with-text/multestep-one/');
     });
 
@@ -11,4 +12,3 @@ describe('Form with Text', () => {
         cy.get('section#295330').matchImageStable();
     });
 });
-``;

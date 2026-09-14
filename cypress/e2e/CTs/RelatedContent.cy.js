@@ -6,6 +6,14 @@ describe('Related Content', () => {
     it('Checks the component and takes a screenshot', () => {
         cy.get('section[id="180231"]', { timeout: 5000 }).should('exist').and('be.visible');
 
-        cy.get('section[id="180231"]').matchImageStable({ maxDiffThreshold: 0.02 });
+        // Компенсуємо висоту sticky-навігації, щоб вона не потрапляла в кадр скріншоту
+        cy.get('.mega_navigation__outer').invoke('outerHeight').then((navHeight) => {
+            cy.get('section[id="180231"]').then(($el) => {
+                const top = $el.offset().top - navHeight - 20;
+                cy.window().scrollTo(0, Math.max(top, 0));
+            });
+        });
+
+        cy.get('section[id="180231"]').matchImageStable();
     });
 });

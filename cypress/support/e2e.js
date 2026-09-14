@@ -24,6 +24,15 @@ beforeEach(() => {
     cy.setCookie('OptanonAlertBoxClosed', 'true');
 });
 
+// ✅ force prefers-reduced-motion via CDP (replaces --force-prefers-reduced-motion,
+// which doesn't reliably affect matchMedia())
+beforeEach(() => {
+    Cypress.automation('remote:debugger:protocol', {
+        command: 'Emulation.setEmulatedMedia',
+        params: { media: 'screen', features: [{ name: 'prefers-reduced-motion', value: 'reduce' }] }
+    });
+});
+
 // ✅ MUST BE HERE — GLOBAL + EARLY
 Cypress.on('window:before:load', (win) => {
     win.addEventListener('error', (event) => {

@@ -1,4 +1,4 @@
-describe('Testimonials', () => {
+describe('Tabs Testimonials', () => {
     beforeEach(() => {
         cy.visit('/test/git/testimonials/');
     });

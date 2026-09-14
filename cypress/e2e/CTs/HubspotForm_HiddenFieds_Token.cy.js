@@ -47,7 +47,7 @@ describe('HubSpot form – advertising_conversion_level', () => {
 
         // ✅ ПЕРЕВІРКА ЧЕРЕЗ CRM CONTACTS API
         cy.get('@testEmail').then((email) => {
-            cy.wait(20000);
+            cy.wait(25000);
 
             cy.request({
                 method: 'POST',

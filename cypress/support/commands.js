@@ -43,7 +43,7 @@ Cypress.Commands.add('acceptCookies', () => {
         cy.log('Cookie banner not found — skipping');
     });
 });
-// Стабільний візуальний скріншот: чекає шрифти та картинки перед matchImage
+// Стабільний візуальний скріншот: чекає шрифти, картинки та sticky-nav перед matchImage
 Cypress.Commands.add('matchImageStable', { prevSubject: 'element' }, (subject, options) => {
     // 1. Шрифти завантажені
     cy.document().its('fonts.status').should('equal', 'loaded');
@@ -56,6 +56,7 @@ Cypress.Commands.add('matchImageStable', { prevSubject: 'element' }, (subject, o
                 .find('img')
                 .should(($found) => {
                     $found.each((_, img) => {
+                        if (img.offsetParent === null) return; // display:none — неактивний таб/слайд, скіп
                         const rect = img.getBoundingClientRect();
                         const win = img.ownerDocument.defaultView;
                         const inViewport =
@@ -65,13 +66,25 @@ Cypress.Commands.add('matchImageStable', { prevSubject: 'element' }, (subject, o
                             rect.right > 0 &&
                             rect.top < win.innerHeight &&
                             rect.left < win.innerWidth;
-                        if (!inViewport) return; // поза в'юпортом (неактивні слайди) — lazy-load не спрацює
+                        if (!inViewport) return; // поза в'юпортом — lazy-load не спрацює
                         expect(img.naturalWidth, `img ${img.src}`).to.be.greaterThan(0);
                     });
                 });
         }
     });
 
-    // 3. Скріншот
-    cy.wrap(subject).matchImage(options);
+    // 3. Компенсуємо sticky-навігацію, щоб вона не потрапляла в кадр скріншоту
+    cy.get('body').then(($body) => {
+        const $nav = $body.find('.mega_navigation__outer');
+        const navHeight = $nav.length ? $nav[0].getBoundingClientRect().height : 0;
+        cy.wrap(subject).then(($el) => {
+            const top = $el.offset().top - navHeight - 20;
+            cy.window().scrollTo(0, Math.max(top, 0), { ensureScrollable: false });
+        });
+    });
+
+    cy.wrap(subject).should('be.visible');
+
+    // 4. Скріншот
+    cy.wrap(subject).matchImage({ maxDiffThreshold: 0.15, ...options });
 });

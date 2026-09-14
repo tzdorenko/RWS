@@ -1,25 +1,16 @@
-describe('Inverted Main Navigation', () => {
+Cypress.on('uncaught:exception', (err) => {
+    if (err.message.includes('clientHeight')) {
+        return false;
+    }
+});
+
+describe('Inverted Main Navigation CT', () => {
     beforeEach(() => {
         cy.visit('/test/git/inverted-main-nav/');
-        cy.acceptCookies();
     });
 
-    it('Checks the inverted main navigation and takes a screenshot', () => {
-        cy.get('.inverted-overlay').should('exist');
-
-        // Шрифти завантажені
-        cy.document().its('fonts.status').should('equal', 'loaded');
-
-        // Чекаємо завантаження видимих картинок навігації
-        // (lazy-іконки в закритих мега-меню пропускаємо — на скріншот не потрапляють)
-        cy.get('.mega_navigation__outer img').should(($imgs) => {
-            $imgs.each((_, img) => {
-                if (img.offsetParent === null) return; // невидима — скіп
-                expect(img.naturalWidth, `img ${img.src}`).to.be.greaterThan(0);
-            });
-        });
-
-        // Скріншот інвертованої навігації
-        cy.get('.mega_navigation__outer').matchImage();
+    it('Checks the CT on the page and takes a screenshot', () => {
+        cy.get('.inverted-overlay', { timeout: 5000 }).should('exist');
+        cy.get('.inverted-overlay').matchImageStable();
     });
 });

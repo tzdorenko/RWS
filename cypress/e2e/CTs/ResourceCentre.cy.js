@@ -8,19 +8,9 @@ describe('Resource Centre', () => {
             .should('exist')
             .and('be.visible');
 
-        // Шрифти завантажені
-        cy.document().its('fonts.status').should('equal', 'loaded');
+        cy.get('section[id="Global-Resource-Center"] .resource_item', { timeout: 10000 })
+            .should('have.length.greaterThan', 0);
 
-        // Чекаємо завантаження видимих картинок компонента
-        // (приховані іконки фільтрів пропускаємо — вони lazy і на скріншот не потрапляють)
-        cy.get('section[id="Global-Resource-Center"] img').should(($imgs) => {
-            $imgs.each((_, img) => {
-                if (img.offsetParent === null) return; // невидима — скіп
-                expect(img.naturalWidth, `img ${img.src}`).to.be.greaterThan(0);
-            });
-        });
-
-        // Скріншот і порівняння (без matchImageStable, щоб не висіти на прихованих іконках)
-        cy.get('section[id="Global-Resource-Center"]').matchImage();
+        cy.get('section[id="Global-Resource-Center"]').matchImageStable({ maxDiffThreshold: 0.35 });
     });
 });

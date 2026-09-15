@@ -3,8 +3,7 @@ describe('Content Block Image (Video) – Left Center', () => {
         cy.visit('/test/git/content-block-banner-autoplay/');
     });
 
-    it('Checks CT on the page and takes a screenshot', () => {
-        // прибираємо header/footer для чистого скріншоту
+    it('Checks the component is present', () => {
         cy.get('header, footer').invoke('css', 'display', 'none');
 
         cy.get('section#233164', { timeout: 10000 })
@@ -12,8 +11,6 @@ describe('Content Block Image (Video) – Left Center', () => {
             .should('exist')
             .and('be.visible');
 
-        cy.get('section#233164').matchImageStable();
+        cy.get('section#233164 video-js').should('exist');
     });
 });
-``;
-

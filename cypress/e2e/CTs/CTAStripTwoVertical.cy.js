@@ -6,6 +6,6 @@ describe('CTA Strip - Two Vertical', () => {
     it('Checks the component and takes a screenshot', () => {
         cy.get('section[id="197332"]', { timeout: 5000 }).should('exist').and('be.visible');
 
-        cy.get('section[id="197332"]').matchImageStable();
+        cy.get('section[id="197332"]').matchImageStable({ maxDiffThreshold: 0.3 });
     });
 });

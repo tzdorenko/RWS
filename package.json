@@ -15,7 +15,8 @@
         "cy:staging": "cross-env ENV=staging npx cypress open --e2e",
         "cy:live": "cross-env ENV=live npx cypress open --e2e",
         "cy:staging:run": "cross-env ENV=staging npx cypress run --spec \"cypress/e2e/cts/*.cy.js\"",
-        "cy:live:run": "cross-env ENV=live npx cypress run --spec \"cypress/e2e/cts/*.cy.js\""
+        "cy:live:run": "cross-env ENV=live npx cypress run --spec \"cypress/e2e/cts/*.cy.js\"",
+        "cy:staging:run:headed": "cross-env ENV=staging npx cypress run --headed --spec \"cypress/e2e/cts/headed/*.cy.js\""
     },
     "keywords": [],
     "author": "",

@@ -45,7 +45,7 @@ describe('HubSpot form – advertising_conversion_level', () => {
         // ASSERT: сабміт пройшов
         cy.wait('@hsSubmit', { timeout: 15000 }).its('response.statusCode').should('eq', 200);
 
-        // ТИМЧАСОВИЙ DEBUG — покаже реальну відповідь CRM Contacts API
+        // ✅ ПЕРЕВІРКА ЧЕРЕЗ CRM CONTACTS API
         cy.get('@testEmail').then((email) => {
             cy.wait(45000);
 
@@ -72,9 +72,28 @@ describe('HubSpot form – advertising_conversion_level', () => {
                 },
                 failOnStatusCode: false,
             }).then((res) => {
-                throw new Error(
-                    `DEBUG CRM status=${res.status} body=${JSON.stringify(res.body)}`,
-                );
+                if (res.status === 403) {
+                    cy.log('❌ 403 – токен не має прав crm.objects.contacts.read');
+                    cy.log(JSON.stringify(res.body));
+                    throw new Error(
+                        'HubSpot API: недостатньо прав. Додай скоуп crm.objects.contacts.read',
+                    );
+                }
+
+                expect(res.status).to.eq(200);
+                expect(res.body.total, 'Contact found in HubSpot').to.be.greaterThan(0);
+
+                const props = res.body.results[0].properties;
+
+                expect(props.email).to.eq(email);
+                expect(props.firstname).to.eq('Tetiana');
+                expect(props.lastname).to.eq('Cypresstest');
+                expect(props.company).to.eq('TestCompany');
+                expect(props.jobtitle).to.eq('QA Engineer');
+                expect(props.phone).to.eq('+3803333333333');
+                expect(props.country).to.eq('Ukraine');
+
+                cy.log('✅ All form fields verified in HubSpot CRM!');
             });
         });
     });

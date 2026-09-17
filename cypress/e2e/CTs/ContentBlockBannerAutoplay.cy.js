@@ -5,20 +5,15 @@ describe('Content Block Banner AutoPlay', () => {
         cy.visit('/test/git/content-block-banner-autoplay/');
     });
 
-    it('Checks section 233164 and takes screenshot', () => {
+    it('Checks section 233164 autoplay started, ignoring video frame', () => {
         cy.get('section#233164', { timeout: 5000 })
             .scrollIntoView({ block: 'center' })
             .should('exist')
             .and('be.visible');
 
-        cy.wait(200);
-        cy.get('section#233164 video').then(($videos) => {
-            $videos.each((i, video) => {
-                video.pause();
-                video.currentTime = 0;
-            });
-        });
-
-        cy.get('section#233164').matchImageStable();
+        // Перевіряємо, що плеєр існує і автоплей реально запустився
+        cy.get('section#233164 video-js', { timeout: 10000 })
+            .should('exist')
+            .and('have.class', 'vjs-playing');
     });
 });

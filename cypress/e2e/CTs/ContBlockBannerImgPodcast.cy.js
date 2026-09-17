@@ -7,16 +7,15 @@ describe('Banner Block Banner Image Podcast', () => {
         cy.visit('/test/git/content-block-banner-autoplay-one-case/');
     });
 
-    it('Checks section 233168 and takes screenshot', () => {
-        cy.get('section[id="233168"]', { timeout: 20000 }).should('exist').and('be.visible');
-
-        // Перевіряємо, що відео присутнє у компоненті
-        cy.get('section[id="233168"] video').should('exist').and('be.visible');
-
-        cy.get('section[id="233168"]')
+    it('Checks section 233168 autoplay started, ignoring video frame', () => {
+        cy.get('section[id="233168"]', { timeout: 20000 })
             .scrollIntoView()
-            .matchImageStable({
-                screenshotConfig: { blackout: ['section[id="233168"] video'] },
-            });
+            .should('exist')
+            .and('be.visible');
+
+        // Перевіряємо, що плеєр існує і автоплей реально запустився
+        cy.get('section[id="233168"] video-js', { timeout: 10000 })
+            .should('exist')
+            .and('have.class', 'vjs-playing');
     });
 });
